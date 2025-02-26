@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进度条示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            margin: 20px 0;
+            color: #333;
+        }
+        .progress-container {
+            width: 1000px; /* 设置为100% */
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            position: relative;
+            height: 20px; /* 进度条高度 */
+            margin: 20px 0;
+        }
+        .progress {
+            height: 100%;
+            background-color: #ffb74d;
+            border-radius: 10px;
+            width: 100%; /* 填充整个范围 */
+        }
+        .labels {
+            display: flex;
+            width: 100%;
+            position: absolute;
+            top: 30px; /* 标签位置 */
+            font-size: 14px;
+            color: #333;
+        }
+        .numbers {
+            display: flex;
+            width: 100%;
+            position: absolute;
+            top: -20px; /* 数字标签位置在竖线正上方 */
+            font-size: 14px;
+            color: #333;
+        }
+        .info {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+        }
+        .scale {
+            position: absolute;
+            height: 20px; /* 刻度线高度，等于进度条高度 */
+            width: 1px; /* 刻度线宽度 */
+            background-color: #333; /* 刻度线颜色 */
+            top: 0; /* 刻度位置，重叠在进度条上 */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>用户VIP等级说明</h2>
+
+    <div class="progress-container">
+        <div class="progress"></div>
+        <div class="numbers">
+            <span>0</span>
+            <span style="margin-left: 18%;">1000</span>
+            <span style="margin-left: 17%;">20000</span>
+            <span style="margin-left: 17%;">100000</span>
+            <span style="margin-left: 17%;">500000</span>
+        </div>
+        <div class="labels">
+            <span>普通</span>
+            <span style="margin-left: 16%;">黄金</span>
+            <span style="margin-left: 17%;">白金</span>
+            <span style="margin-left: 17%;">铂金</span>
+            <span style="margin-left: 17%;">黑钻</span>
+        </div>
+        <div class="scale" style="left: 20%;"></div>
+        <div class="scale" style="left: 40%;"></div>
+        <div class="scale" style="left: 60%;"></div>
+        <div class="scale" style="left: 80%;"></div>
+    </div>
+
+    <div class="info">
+        等级权益说明：
+        黄金：除了平台固定价格差值利润以为，额外增加2%交易返现。
+        白金：除了平台固定价格差值利润以为，额外增加3%交易返现。
+        铂金：除了平台固定价格差值利润以为，额外增加4%交易返现。
+        黑钻：除了平台固定价格差值利润以为，额外增加6%交易返现。
+    </div>
+
+    <div class="info">
+        下线交易额对本人积分影响说明：
+
+        <br>本人所有下线的交易总量的5%，奖励给本人，算作成交量计数<br>
+        
+    </div>
+
+</body>
+</html>
